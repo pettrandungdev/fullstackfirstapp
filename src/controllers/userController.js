@@ -22,9 +22,9 @@ let handleLongin = async (req, res) => {
 }
 
 let handleGetAllUsers = async (req, res) => {
-    let userId = req.body.id;
+    let userId = req.query.id;
 
-    if (!id) {
+    if (!userId) {
         return res.status(200).json({
             errCode: 1,
             errMessage: 'Missing required parameters!',
